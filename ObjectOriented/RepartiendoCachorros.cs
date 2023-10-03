@@ -1,36 +1,36 @@
 using System;
 
  class DueñoPerrita {
-    private int aCachorros;
-    private int aHijos;
-    private int aCachorrosAdoptados;
+    private int aCantidadCachorros;
+    private int aNumeroHijos;
+    private int aCachorrosAdoptadosPancho;
     private const int ESPOSA = 1;
     public  DueñoPerrita () {
-        this.aCachorros=0;
-        this.aHijos=0;
-        this.aCachorrosAdoptados=0;
+        this.aCantidadCachorros=0;
+        this.aNumeroHijos=0;
+        this.aCachorrosAdoptadosPancho=0;
     }
     public DueñoPerrita (int Cachorros,int Hijos,int CachorrosAdoptados) {
-        this.aCachorros=Cachorros;
-        this.aHijos=Hijos;
-        this.aCachorrosAdoptados=CachorrosAdoptados;
+        this.aCantidadCachorros=Cachorros;
+        this.aNumeroHijos=Hijos;
+        this.aCachorrosAdoptadosPancho=CachorrosAdoptados;
    }
     public int Cachorros  {
-        get { return this.aCachorros;}
-        set { this.aCachorros = value;}
+        get { return this.aCantidadCachorros;}
+        set { this.aCantidadCachorros = value;}
     }
     public int Hijos  {
-        get { return this.aHijos;}
-        set { this.aHijos = value;}
+        get { return this.aNumeroHijos;}
+        set { this.aNumeroHijos = value;}
     }
     public int CachorrosAdoptados  {
-        get { return this.aCachorrosAdoptados;}
-        set { this.aCachorrosAdoptados = value;}
+        get { return this.aCachorrosAdoptadosPancho;}
+        set { this.aCachorrosAdoptadosPancho = value;}
     }
     public int CantidadCachorrosQueSeQuedo() {
         int CachorrosSobrantes = 0;
-        CachorrosSobrantes =(this.aCachorros - this.aCachorrosAdoptados) % ( aHijos + ESPOSA  );
-        return this.aCachorrosAdoptados + CachorrosSobrantes;
+        CachorrosSobrantes =(this.aCantidadCachorros - this.aCachorrosAdoptadosPancho) % ( aNumeroHijos + ESPOSA  );
+        return this.aCachorrosAdoptadosPancho + CachorrosSobrantes;
     }
  }  
 class RepartiendoCachorros {
